@@ -2,35 +2,7 @@ import { useState, Component } from "react";
 import { CardList } from "./Components/card-list/card-list";
 import "./App.css";
 import { SearchBox } from "./Components/search-box/search-box";
-
-// function App() {
-//   const [count, setCount] = useState(0);
-
-//   return (
-//     <>
-//       <div>
-//         <a href="https://vite.dev" target="_blank">
-//           <img src={viteLogo} className="logo" alt="Vite logo" />
-//         </a>
-//         <a href="https://react.dev" target="_blank">
-//           <img src={reactLogo} className="logo react" alt="React logo" />
-//         </a>
-//       </div>
-//       <h1>Vite + React</h1>
-//       <div className="card">
-//         <button onClick={() => setCount((count) => count + 1)}>
-//           count is {count}
-//         </button>
-//         <p>
-//           Edit <code>src/App.jsx</code> and save to test HMR
-//         </p>
-//       </div>
-//       <p className="read-the-docs">
-//         Click on the Vite and React logos to learn more
-//       </p>
-//     </>
-//   );
-// }
+import "./App.css";
 
 class App extends Component {
   constructor() {
@@ -62,8 +34,9 @@ class App extends Component {
 
     return (
       <div>
+        <h1>Monsters Rolodex</h1>
         <SearchBox
-          placeholder="Search || Robots"
+          placeholder="Search Robots"
           handleChange={this.handleChange}
         />
         <CardList monsters={filteredMonsters} />
